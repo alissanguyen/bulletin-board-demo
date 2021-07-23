@@ -9,6 +9,13 @@ import FilterBar from "./components/FilterBar";
 import CategorySearchBar from "./components/CategorySearchBar";
 
 function App() {
+  /**
+   * TODO: Add empty state (illustration when there is no sticky)
+   * TODO: Add loading state (when adding new sticky)
+   * TODO: Remove single sticky
+   * TODO: Remove all sticky
+   */
+
   const [tasks, setTasks] = React.useState(samplePostIts2);
   const [appliedCategoryFilters, setAppliedCategoryFilters] = React.useState<
     CategoryFilter[]
