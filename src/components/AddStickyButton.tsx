@@ -1,5 +1,7 @@
 import * as React from "react";
 import * as faker from "faker";
+import Select from "react-select";
+import { categories } from "../constants/sampleData";
 
 interface Props {
   handleNewSticky: (newStickyData: PostItNoteData) => void;
@@ -9,6 +11,7 @@ const AddStickyButton: React.FC<Props> = (props) => {
   const [openForm, setOpenForm] = React.useState(false);
   const [titleChange, setTitleChange] = React.useState("");
   const [descriptionChange, setDescriptionChange] = React.useState("");
+  const [category, setCategory] = React.useState("");
 
   function handleSubmitNewSticky() {
     const newPostItNoteObject = {
@@ -17,7 +20,7 @@ const AddStickyButton: React.FC<Props> = (props) => {
       description: descriptionChange,
       createdAtMillis: new Date(),
       isCompleted: false,
-      category: "Others",
+      category: category,
     };
     console.log(newPostItNoteObject);
     props.handleNewSticky(newPostItNoteObject);
@@ -58,7 +61,13 @@ const AddStickyButton: React.FC<Props> = (props) => {
               onChange={(e) => setDescriptionChange(e.target.value)}
               required
             />
-            {/* TODO: Add categories */}
+            <Select
+              closeMenuOnSelect={true}
+              placeholder="Select category..."
+              options={categories}
+              className="category-select-bar"
+              onChange={(el: any) => setCategory(el.value)}
+            />
             <button type="submit" className="submit-add-sticky-button">
               Submit
             </button>
@@ -68,6 +77,7 @@ const AddStickyButton: React.FC<Props> = (props) => {
             >
               Cancle
             </button>
+            
           </form>
         </div>
       ) : null}
