@@ -194,14 +194,12 @@
   border-color: rgba(0, 102, 255, 0.603);
 }
 
-
 .empty-state-description-headline {
   font-size: 2rem;
   letter-spacing: 0px;
   font-weight: 700;
   margin-bottom: 0px;
   margin-top: 40px;
-  
 }
 
 .empty-state-description {
@@ -209,7 +207,6 @@
   font-weight: 400;
   margin-top: 15px;
   margin-bottom: 35px;
-  
 }
 
 .empty-state-illustration {
@@ -227,4 +224,127 @@
 
 .empty-state-wrapper {
   text-align: center;
+}
+
+.add-new-sticky-button {
+  font-size: 20px;
+  min-height: 38px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: hsl(0, 0%, 100%);
+  border-color: hsl(0, 0%, 80%);
+  border-radius: 4px;
+  border: solid 1px hsl(0, 0%, 80%);
+  outline: 0 !important;
+  transition: all 100ms;
+  color: hsl(0, 0%, 50%);
+}
+.add-new-sticky-button:hover {
+  border-color: rgba(128, 128, 128, 0.603);
+}
+.add-new-sticky-button:active {
+  border-width: 3px;
+  border-color: rgba(0, 102, 255, 0.603);
+}
+
+.add-new-sticky-form-wrapper {
+  position: absolute;
+  bottom: 30%;
+  right: 35%;
+  margin-right: 2%;
+  z-index: 9999 !important;
+  width: 30%;
+  height: 40%;
+}
+
+.add-new-sticky-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: white;
+  border: solid 3px black;
+  border-radius: 14px;
+  height: 100%;
+}
+.add-new-sticky-form label {
+  font-size: 20px;
+  font-weight: 600;
+}
+.add-new-sticky-form input[type="text"] {
+  width: 94.5%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  font-size: 18px;
+}
+
+.add-new-sticky-form input[type="text"]:focus {
+  background-color: #ddd;
+  outline: none;
+  font-weight: 600;
+}
+
+#new-sticky-description {
+  height: 30%;
+  padding: 10px;
+  border: solid 2px hsl(0, 0%, 50%);
+  font-size: 16px;
+  font: inherit;
+  margin-top: 8px;
+  margin-bottom: 8%;
+}
+
+.submit-add-sticky-button {
+  font-size: 20px;
+  margin-left: 30%;
+  margin-bottom: 2%;
+  width: 40%;
+  min-height: 38px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: hsl(0, 0%, 100%);
+  border-color: hsl(0, 0%, 80%);
+  border-radius: 4px;
+  border: solid 3px hsl(0, 0%, 80%);
+  outline: 0 !important;
+  transition: all 100ms;
+  color: hsl(0, 0%, 50%);
+}
+.submit-add-sticky-button:hover {
+  border-color: rgba(0, 0, 0, 0.822);
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.822);
+}
+.submit-add-sticky-button:active {
+  border-width: 3px;
+  border-color: rgb(68, 185, 0);
+  color: rgb(68, 185, 0);
+}
+
+.cancle-add-sticky-button {
+  width: 40%;
+  margin-left: 30%;
+  font-size: 20px;
+  min-height: 38px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: hsl(0, 0%, 100%);
+  border-color: hsl(0, 0%, 80%);
+  border-radius: 4px;
+  border: solid 3px hsl(0, 0%, 80%);
+  outline: 0 !important;
+  transition: all 100ms;
+  color: hsl(0, 0%, 50%);
+  margin-bottom: 5%;
+}
+.cancle-add-sticky-button:hover {
+  border-color: rgba(0, 0, 0, 0.822);
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.822);
+}
+.cancle-add-sticky-button:active {
+  border-width: 3px;
+  border-color: rgba(255, 0, 0, 0.603);
+  color: rgba(255, 0, 0, 0.603);
 }

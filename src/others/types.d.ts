@@ -7,6 +7,11 @@ interface PostItNoteData {
   category: string;
 }
 
+interface NewPostItNoteData {
+  title: string;
+  description: string;
+  category: string
+}
 
 interface CategoryFilter {
   value: string;

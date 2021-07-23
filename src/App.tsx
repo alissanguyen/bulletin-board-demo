@@ -8,10 +8,11 @@ import * as React from "react";
 import FilterBar from "./components/FilterBar";
 import CategorySearchBar from "./components/CategorySearchBar";
 import EmptyState from "./components/EmptyState";
+import AddStickyButton from "./components/AddStickyButton";
 
 function App() {
   /**
-   * TODO: Add empty state (illustration when there is no sticky)
+   * TODO: Implement user authentication
    * TODO: Add loading state (when adding new sticky)
    */
   const [isEmpty, setIsEmpty] = React.useState(false);
@@ -65,6 +66,15 @@ function App() {
     return newSortedArrayByTimeCreated;
   }
 
+  function addNewSticky(newData: PostItNoteData) {
+    setTasks((prevTasks) => {
+    
+      const tasksClone = [...prevTasks];
+
+      tasksClone.push(newData);
+    return tasksClone;
+  })}
+
   /**
    * Map the sort selection to the function to sort by
    */
@@ -113,14 +123,16 @@ function App() {
         })
       : filteredPostIts;
 
+
   return (
     <div className="App">
       <h1 className="app-name">Bulletin Board</h1>
       <div className="app-navigation-center">
         <Organizer sortedBy={(sorter: string) => setSortedBy(sorter)} />
+        <AddStickyButton handleNewSticky={(data: PostItNoteData) => addNewSticky(data)}/>
         <CategorySearchBar
           appliedCategoryFilters={appliedCategoryFilters}
-          onCategoryCHange={(categories) =>
+          onCategoryChange={(categories) =>
             setAppliedCategoryFilters(categories)
           }
         />
