@@ -7,14 +7,14 @@ import PostItNote from "./components/PostItNote";
 import * as React from "react";
 import FilterBar from "./components/FilterBar";
 import CategorySearchBar from "./components/CategorySearchBar";
+import EmptyState from "./components/EmptyState";
 
 function App() {
   /**
    * TODO: Add empty state (illustration when there is no sticky)
    * TODO: Add loading state (when adding new sticky)
-   * TODO: Remove all sticky
    */
-
+  const [isEmpty, setIsEmpty] = React.useState(false);
   const [tasks, setTasks] = React.useState(samplePostIts2);
   const [appliedCategoryFilters, setAppliedCategoryFilters] = React.useState<
     CategoryFilter[]
@@ -124,9 +124,18 @@ function App() {
             setAppliedCategoryFilters(categories)
           }
         />
-        <button className="remove-all-button" onClick={() => setTasks([])}>Remove all</button>
+        <button
+          className="remove-all-button"
+          onClick={function () {
+            setTasks([]);
+            setIsEmpty(true);
+          }}
+        >
+          Remove all
+        </button>
         <FilterBar filterBy={(filter: string) => setFilterBy(filter)} />
       </div>
+      <div className="empty-state-wrapper">{isEmpty ? <EmptyState /> : null}</div>
 
       <Masonry
         breakpointCols={breakpointForMasonryLayout}

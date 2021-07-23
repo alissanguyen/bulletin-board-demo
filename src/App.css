@@ -104,7 +104,7 @@
 
 .sorted-by-bar {
   position: relative;
-  display: inline-block;
+  display: inline;
 }
 
 .dropdown-menu-content {
@@ -151,8 +151,26 @@
 }
 
 .remove-post-it-button {
-  
-
+  font-size: 16px;
+  min-height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: hsl(0, 0%, 100%);
+  border-color: hsl(0, 0%, 80%);
+  border-radius: 4px;
+  border: solid 1px hsl(0, 0%, 80%);
+  outline: 0 !important;
+  transition: all 100ms;
+  color: hsl(0, 0%, 50%);
+}
+.remove-post-it-button:hover {
+  background-color: hsl(56, 100%, 50%);
+  border-color: hsl(0, 26%, 7%);
+  color: hsl(0, 26%, 7%);
+}
+.remove-post-it-button:active {
+  border-width: 3px;
+  font-weight: 600;
 }
 
 .remove-all-button {
@@ -174,4 +192,39 @@
 .remove-all-button:active {
   border-width: 3px;
   border-color: rgba(0, 102, 255, 0.603);
+}
+
+
+.empty-state-description-headline {
+  font-size: 2rem;
+  letter-spacing: 0px;
+  font-weight: 700;
+  margin-bottom: 0px;
+  margin-top: 40px;
+  
+}
+
+.empty-state-description {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-top: 15px;
+  margin-bottom: 35px;
+  
+}
+
+.empty-state-illustration {
+  flex: 1 1 auto;
+  padding: 0;
+  margin: auto;
+  max-width: 40%;
+  max-height: 40%;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+}
+
+.empty-state-wrapper {
+  text-align: center;
 }
