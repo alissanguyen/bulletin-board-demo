@@ -1,0 +1,117 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.login-credentials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-others {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 1.4rem;
+}
+
+.email {
+  border-collapse: collapse;
+  border-radius: 20px 20px 0px 0px;
+}
+.email:focus {
+  outline:none;
+  border: solid 3px rgb(0, 119, 255);
+  margin-top:-2px;
+  border-radius: 20px 20px 0px 0px;
+}
+.password {
+  border-collapse: collapse;
+  border-spacing: 0px;
+  border-radius: 0px 0px 20px 20px;
+  border-top: none;
+}
+.password:focus {
+  outline:none;
+  border: solid 3px rgb(0, 119, 255);
+  border-radius: 0px 0px 20px 20px;
+  margin-bottom:-4px;
+}
+
+.forgot-pw {
+  font-size: 1.5rem;
+}
+
+.remember-me {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 350;
+  color: rgba(0, 0, 0, 0.822);
+}
+
+
+
+.login-credentials > input {
+  background-color: white;
+  line-height: 1.9rem;
+  font-size: 1.2rem;
+
+  padding: 14px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+}
+
+.header-text {
+  display: flex;
+  align-items: center;
+  font-size: 3.2rem;
+  font-weight: 600;
+
+  color: rgb(162, 23, 255);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-in-button {
+  padding: 20px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-radius: 20px;
+  background-color: rgb(162, 23, 255);
+  color: white;
+  margin-top: 40px;
+  border: none;
+}
+
+.sign-in-button:hover {
+  background-color: rgb(142, 0, 236);
+}
+
+button:hover::before, button:focus::before {
+  opacity: 1;
+}
+button::before {
+  content: '';
+  border-radius: 30px;
+  min-width: 30%;
+  min-height: 7%;
+  border: 6px solid #bb27ffb0;
+  box-shadow: 0 0 60px rgba(176, 79, 255, 0.815);
+  position: absolute;
+  top: 57.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
