@@ -94,9 +94,12 @@
   color: hsl(0, 0%, 50%);
 }
 
-.sorted-by-button:hover,
-.sorted-by-button:focus {
+.sorted-by-button:hover {
   border-color: rgba(128, 128, 128, 0.603);
+}
+.sorted-by-button:focus {
+  border-width: 3px;
+  border-color: rgba(0, 102, 255, 0.603);
 }
 
 .sorted-by-bar {
@@ -145,4 +148,9 @@
 .category-search-bar {
   width: 40%;
   font-size: 20px;
+}
+
+.remove-post-it-button {
+  
+
 }

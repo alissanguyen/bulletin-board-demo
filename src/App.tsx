@@ -12,7 +12,6 @@ function App() {
   /**
    * TODO: Add empty state (illustration when there is no sticky)
    * TODO: Add loading state (when adding new sticky)
-   * TODO: Remove single sticky
    * TODO: Remove all sticky
    */
 
@@ -136,6 +135,16 @@ function App() {
         {postItsFilteredByCategory.map((singlePostItData) => {
           return (
             <PostItNote
+              removeTargetSticky={(id) =>
+                setTasks((prevTasks) => {
+                  const indexToRemove = prevTasks.findIndex(
+                    (el) => el.id === id
+                  );
+                  const arrayCopied = [...prevTasks];
+                  arrayCopied.splice(indexToRemove, 1);
+                  return arrayCopied;
+                })
+              }
               onToggleCompleted={(id) =>
                 setTasks((prevTasks) => {
                   const indexToToggle = prevTasks.findIndex(

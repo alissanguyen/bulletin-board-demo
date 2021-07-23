@@ -9,7 +9,6 @@ This is a simple bulletin-board visualization where you can make stickies of tas
 
 ## Upcoming Changes
 
-- Users can remove single sticky
 - Option to remove all sticky
 - Ability to add new sticky
 - Web authentication
@@ -22,6 +21,7 @@ This is a simple bulletin-board visualization where you can make stickies of tas
 - Filter tasks by completion
 - Sort tasks by time created or alphabetical or category
 - Checkbox for completion marking
+- Users can remove single sticky
 
 ### Tech
 
