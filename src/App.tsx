@@ -124,6 +124,7 @@ function App() {
             setAppliedCategoryFilters(categories)
           }
         />
+        <button className="remove-all-button" onClick={() => setTasks([])}>Remove all</button>
         <FilterBar filterBy={(filter: string) => setFilterBy(filter)} />
       </div>
 
