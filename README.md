@@ -9,13 +9,10 @@ This is a simple bulletin-board visualization where you can make stickies of tas
 
 ## Upcoming Changes
 
-- Users can edit single todo
-- Todos prioritizing
-- Todo drag-and-drop
-- Password recovery
-- Improve web visualisation
-- Option to delete multiple todos
-- Personal profile
+- Users can remove single sticky
+- Option to remove all sticky
+- Ability to add new sticky
+- Web authentication
 
 # New Features!
 
