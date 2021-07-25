@@ -27,6 +27,16 @@ export const useStateWithHistory = <T>(
    */
   const [historyPointer, setHistoryPointer] = React.useState(0);
 
+  /**
+   * Cannot undo/redo more than 5 actions
+   */
+  if (history.length > 6) {
+    const newHistoty = [...history];
+    newHistoty.splice(0, 1);
+    setHistory(newHistoty);
+    setHistoryPointer((prev) => prev - 1);
+  }
+
   const currentState = history[historyPointer];
 
   /** Want to expose these two, so consumers of this hook know if fiddling with history is possible. */
@@ -37,8 +47,6 @@ export const useStateWithHistory = <T>(
     const newState = isStateUpdateFunction<T>(stateUpdate)
       ? stateUpdate(currentState)
       : stateUpdate;
-
-    console.log("NEW STATE", newState);
 
     /**
      * When performing a state change, discard all history past this point. For example, if the
