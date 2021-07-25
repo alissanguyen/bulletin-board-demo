@@ -354,3 +354,69 @@
 .category-select-bar {
   margin-bottom: 4%;
 }
+
+.undo-button:disabled {
+  font-size: 20px;
+  min-height: 38px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 4px;
+  border: solid 1px hsl(0, 0%, 80%);
+  outline: 0 !important;
+  transition: all 100ms;
+  color: hsl(0, 0%, 50%);
+}
+.undo-button:enabled {
+  font-size: 20px;
+  min-height: 38px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 4px;
+  border: solid 1px black;
+  outline: 0 !important;
+  transition: all 100ms;
+  color: black;
+}
+.undo-button:enabled:hover {
+  border-color: black;
+  color: black;
+  font-weight: 600;
+  padding-left: 7px;
+  padding-right: 7px;
+  border: solid 3px black;
+}
+
+.redo-button:disabled {
+  font-size: 20px;
+  min-height: 38px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 4px;
+  border: solid 1px hsl(0, 0%, 80%);
+  outline: 0 !important;
+  transition: all 100ms;
+  color: hsl(0, 0%, 50%);
+}
+.redo-button:enabled {
+  font-size: 20px;
+  min-height: 38px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 4px;
+  border: solid 1px black;
+  outline: 0 !important;
+  transition: all 100ms;
+  color: black;
+}
+.redo-button:enabled:hover {
+  border-color: black;
+  color: black;
+  font-weight: 600;
+  padding-left: 7px;
+  padding-right: 7px;
+  border: solid 3px black;
+}

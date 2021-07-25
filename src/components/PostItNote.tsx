@@ -2,7 +2,7 @@ import * as React from "react";
 
 interface Props extends PostItNoteData {
   onToggleCompleted: (id: string) => void;
-  removeTargetSticky: (id: string) => void;
+  removeTargetPostIt: (id: string) => void;
 }
 
 const PostItNote: React.FC<Props> = (props) => {
@@ -13,7 +13,7 @@ const PostItNote: React.FC<Props> = (props) => {
   }
 
   function removePostIt() {
-    props.removeTargetSticky(props.id);
+    props.removeTargetPostIt(props.id);
   }
 
   return (

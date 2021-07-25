@@ -9,18 +9,20 @@ This is a simple bulletin-board visualization where you can make stickies of tas
 
 ## Upcoming Changes
 
-- Ability to add new sticky
+- Ability to edit single post-it
 - Web authentication
 
 # New Features!
 
-- Masonry display for stickies
-- Hide/Show completed tasks
-- Filter tasks by catogories
-- Filter tasks by completion
-- Sort tasks by time created or alphabetical or category
+- Masonry display for post-it notes
+- Hide/Show completed post-its
+- Filter post-its by catogories
+- Filter post-its by completion
+- Sort post-its by time created or alphabetical or category
 - Checkbox for completion marking
-- Users can remove single sticky or all stickies at once
+- Users can remove single post-it or all post-its at once
+- Ability to add new post-it
+- Ability to redo/undo action
 
 ### Tech
 

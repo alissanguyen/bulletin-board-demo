@@ -21,6 +21,7 @@ const CategorySearchBar: React.FC<Props> = (props) => {
       className="category-search-bar"
       value={props.appliedCategoryFilters}
       onChange={(value) => handleChange(value as CategoryFilter[])}
+      defaultValue={categories[4]}
     ></Select>
   );
 };

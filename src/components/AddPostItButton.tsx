@@ -4,14 +4,15 @@ import Select from "react-select";
 import { categories } from "../constants/sampleData";
 
 interface Props {
-  handleNewSticky: (newStickyData: PostItNoteData) => void;
+  handleNewPostIt: (newStickyData: PostItNoteData) => void;
 }
 
-const AddStickyButton: React.FC<Props> = (props) => {
+const AddPostItButton: React.FC<Props> = (props) => {
   const [openForm, setOpenForm] = React.useState(false);
   const [titleChange, setTitleChange] = React.useState("");
   const [descriptionChange, setDescriptionChange] = React.useState("");
   const [category, setCategory] = React.useState("");
+
 
   function handleSubmitNewSticky() {
     const newPostItNoteObject = {
@@ -23,7 +24,7 @@ const AddStickyButton: React.FC<Props> = (props) => {
       category: category,
     };
     console.log(newPostItNoteObject);
-    props.handleNewSticky(newPostItNoteObject);
+    props.handleNewPostIt(newPostItNoteObject);
   }
 
   return (
@@ -66,7 +67,12 @@ const AddStickyButton: React.FC<Props> = (props) => {
               placeholder="Select category..."
               options={categories}
               className="category-select-bar"
-              onChange={(el: any) => setCategory(el.value)}
+              
+              onChange={(el) => {
+                if (el !== null) {
+                  setCategory(el.value);
+                }
+              }}
             />
             <button type="submit" className="submit-add-sticky-button">
               Submit
@@ -77,7 +83,6 @@ const AddStickyButton: React.FC<Props> = (props) => {
             >
               Cancle
             </button>
-            
           </form>
         </div>
       ) : null}
@@ -85,4 +90,4 @@ const AddStickyButton: React.FC<Props> = (props) => {
   );
 };
 
-export default AddStickyButton;
+export default AddPostItButton;
