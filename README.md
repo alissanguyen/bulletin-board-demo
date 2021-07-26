@@ -30,4 +30,6 @@ Aufgaben uses a number of open source projects to work properly:
 
 _This project is not open for contribution at the moment._
 
-![Bulletin Board Demo Template Example](https://imgur.com/ScwX4PL)
+![Bulletin Board Demo Template Example](https://imgur.com/SZIk8o2)
+
+![Bulletin Board Demo Template Example 2](https://imgur.com/F34ftPc)

@@ -143,9 +143,9 @@ const EditingPostItNoteDisplay: React.FC<
         checked={stagedPostItNote.isCompleted}
       />
       <div className="remove-and-finish-and-cancel-editing-wrapper">
-        <div className="remove-post-it-button-wrapper">
+        <div className="editing-remove-post-it-button-wrapper">
           <button
-            className="remove-post-it-button"
+            className="editing-remove-post-it-button"
             onClick={() => removePostIt()}
           >
             Remove
@@ -196,7 +196,7 @@ const NonEditingPostItNoteDisplay: React.FC<Props & NonEditingProps> = (
         checked={props.isCompleted}
       />
       {props.cursorIsHover ? (
-        <div className="undo-button-and-remove-button-wrapper">
+        <div className="remove-button-and-edit-button-wrapper">
           <div className="remove-post-it-button-wrapper">
             <button
               className="remove-post-it-button"

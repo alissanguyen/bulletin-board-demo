@@ -1,162 +1,81 @@
+/* ----------------APP BODY AND TITLE STYLING-------------------------- */
 .App {
   padding-left: 2%;
   padding-right: 2%;
-  padding-top: 0.5%;
+  padding-top: 0.1%;
   padding-bottom: 1%;
 }
-
 .app-name {
   font-size: 3rem;
+  padding-left: 0.3%;
+  margin-bottom: 20px;
 }
 
+/* ----------------INDIVIDUAL POST-IT NOTE STYLING-------------------------- */
 .post-it-wrapper {
   position: relative;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  padding: 10px;
+  padding: 5px;
   background-color: rgba(255, 230, 0, 0.466);
   margin: 10px;
+  font-size: 15px;
+  padding-top: 15px;
+  padding-bottom: 10px;
 }
 
 .post-it-wrapper-completed {
   position: relative;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  padding: 10px;
+  padding: 5px;
   background-color: rgb(185, 169, 22);
   margin: 10px;
+  font-size: 15px;
+  padding-top: 15px;
   opacity: 50%;
 }
 
 .post-it-title {
   text-align: left;
-  padding-left: 20px;
+  padding-left: 15px;
+  font-size: 15px;
 }
 
 .post-it-description {
   text-align: left;
-  padding-left: 20px;
+  padding-left: 15px;
+  font-size: 15px;
 }
 
 .post-it-created-time {
-  font-size: 12px;
+  font-size: 10px;
   text-align: left;
-  padding-left: 20px;
-}
-
-.app-navigation-center {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.filter-bar {
-  width: 20%;
-  font-size: 20px;
-  padding: 5px;
+  padding-left: 15px;
 }
 
 .post-it-category {
   text-align: left;
-  padding-left: 20px;
-}
-
-.my-masonry-grid {
-  display: flex;
-  /* margin-left: 1%; 
-  margin-right: 2.5%;  */
-}
-
-.my-masonry-grid_column {
-  background-clip: padding-box;
-}
-
-/* .my-masonry-grid_column > div {
-  margin-bottom: 20px;
-} */
-
-.sorted-by-button {
-  margin-left: 5%;
-  padding: 6px;
-  font-size: 20px;
-  min-height: 38px;
-  padding-left: 10px;
-  padding-right: 10px;
-  cursor: pointer;
-  width: max-content;
-  background-color: hsl(0, 0%, 100%);
-  border-color: hsl(0, 0%, 80%);
-  border-radius: 4px;
-  border: solid 1px hsl(0, 0%, 80%);
-  outline: 0 !important;
-  transition: all 100ms;
-  color: hsl(0, 0%, 50%);
-}
-
-.sorted-by-button:hover {
-  border-color: rgba(128, 128, 128, 0.603);
-}
-.sorted-by-button:focus {
-  border-width: 3px;
-  border-color: rgba(0, 102, 255, 0.603);
-}
-
-.sorted-by-bar {
-  position: relative;
-  display: inline;
-}
-
-.dropdown-menu-content {
-  display: none;
-  position: absolute;
-  background-color: hsl(0, 0%, 100%);
-  border: solid 1px hsl(0, 0%, 80%);
-  margin-left: 6%;
-  min-width: 169px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  font-size: 20px;
-}
-
-.dropdown-menu-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  font-size: 20px;
-  text-align: left;
-}
-
-.sorted-by-bar a:hover {
-  background-color: rgba(56, 149, 255, 0.233);
+  padding-left: 15px;
+  font-size: 15px;
 }
 
 .post-it-checkbox {
   height: 20px;
   width: 20px;
   position: absolute;
-  top: 10px;
-  right: 8px;
-}
-
-.show {
-  display: block;
-}
-
-.category-search-bar {
-  width: 40%;
-  font-size: 20px;
+  top: 8px;
+  right: 6px;
 }
 
 .remove-post-it-button {
-  font-size: 16px;
-  min-height: 30px;
+  font-size: 15px;
+  min-height: 20px;
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   background-color: hsl(0, 0%, 100%);
-  border-color: hsl(0, 0%, 80%);
   border-radius: 4px;
   border: solid 1px hsl(0, 0%, 80%);
   outline: 0 !important;
@@ -169,17 +88,321 @@
   color: hsl(0, 26%, 7%);
 }
 .remove-post-it-button:active {
-  border-width: 3px;
+  border-width: 2px;
   font-weight: 600;
 }
 
-.remove-all-button {
-  font-size: 20px;
-  min-height: 38px;
+.edit-button {
+  font-size: 15px;
+  min-height: 20px;
   padding-left: 10px;
   padding-right: 10px;
   background-color: hsl(0, 0%, 100%);
-  border-color: hsl(0, 0%, 80%);
+  border-radius: 4px;
+  border: solid 1px hsl(0, 0%, 80%);
+  outline: 0 !important;
+  transition: all 100ms;
+  color: hsl(0, 0%, 50%);
+}
+.edit-button:hover {
+  background-color: hsl(56, 100%, 50%);
+  border-color: hsl(0, 26%, 7%);
+  color: hsl(0, 26%, 7%);
+}
+.edit-button:active {
+  border-width: 2px;
+  font-weight: 600;
+}
+.remove-button-and-edit-button-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 14px;
+  margin-right: 14px;
+}
+
+/* ----------------POST-IT EDITING FORM STYLING-------------------------- */
+.remove-and-finish-and-cancel-editing-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 3px;
+  margin-right: 4px;
+}
+
+.cancel-editing-button {
+  font-size: 15px;
+  min-height: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 2px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 4px;
+  border: solid 1px hsl(0, 0%, 80%);
+  outline: 0 !important;
+  transition: all 100ms;
+  color: hsl(0, 0%, 50%);
+}
+.cancel-editing-button:hover {
+  background-color: hsl(56, 100%, 50%);
+  border-color: hsl(0, 26%, 7%);
+  color: hsl(0, 26%, 7%);
+}
+.cancel-editing-button:active {
+  border-width: 2px;
+  font-weight: 600;
+}
+
+.finish-editing-button {
+  font-size: 15px;
+  min-height: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: hsla(56, 100%, 50%, 0.644);
+  border-radius: 4px;
+  border: solid 1px black;
+  outline: 0 !important;
+  transition: all 100ms;
+  color: black;
+}
+.finish-editing-button:hover {
+  background-color: hsl(54, 100%, 50%);
+  border-color: hsl(0, 26%, 7%);
+  border-width: 1.5px;
+  color: hsl(0, 26%, 7%);
+}
+.finish-editing-button:active {
+  border-width: 2px;
+  font-weight: 600;
+}
+
+.editing-remove-post-it-button {
+  font-size: 15px;
+  min-height: 20px;
+  padding-left: 5px;
+  margin-left: 4px;
+  padding-right: 5px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 4px;
+  border: solid 1px hsl(0, 0%, 80%);
+  outline: 0 !important;
+  transition: all 100ms;
+  color: black;
+}
+.editing-remove-post-it-button:hover {
+  background-color: hsl(56, 100%, 50%);
+  border-color: hsl(0, 26%, 7%);
+  color: hsl(0, 26%, 7%);
+}
+.editing-remove-post-it-button:active {
+  border-width: 2px;
+  font-weight: 600;
+}
+
+.title-editing-label {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.description-editing-label {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.post-it-title-input-editing {
+  font-size: 15px;
+  font-weight: 600;
+}
+.post-it-description-input-editing {
+  font: inherit;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.editing-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.category-editing-bar {
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+
+/* ----------------APP NAVIGATION CENTER STYLING-------------------------- */
+.app-navigation-center {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  max-height: 30px;
+}
+
+.sorted-by-button {
+  margin-left: 5%;
+  padding: 3px;
+  font-size: 15px;
+  min-height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  width: max-content;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 4px;
+  border: solid 1px hsl(0, 0%, 80%);
+  outline: 0 !important;
+  transition: all 100ms;
+  color: hsl(0, 0%, 50%);
+}
+.sorted-by-button:hover {
+  border-color: rgba(128, 128, 128, 0.603);
+}
+.sorted-by-button:focus {
+  border-width: 2px;
+  border-color: rgba(0, 102, 255, 0.603);
+}
+.sorted-by-bar {
+  position: relative;
+  display: inline;
+}
+.sorted-by-bar-dropdown-menu-content {
+  display: none;
+  position: absolute;
+  background-color: hsl(0, 0%, 100%);
+  border: solid 1px hsl(0, 0%, 80%);
+  margin-left: 6%;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  font-size: 15px;
+}
+.sorted-by-bar-dropdown-menu-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 15px;
+  text-align: left;
+  min-width: 111px;
+  border-radius: 0px;
+}
+.sorted-by-bar a:hover {
+  background-color: rgba(56, 149, 255, 0.233);
+}
+
+.show {
+  display: block;
+}
+
+.add-new-sticky-button {
+  padding: 3px;
+  font-size: 15px;
+  min-height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: hsl(59, 100%, 49%);
+  border-radius: 4px;
+  border: solid 1px hsla(0, 71%, 5%, 0.699);
+  outline: 0 !important;
+  transition: all 100ms;
+  color: black;
+}
+.add-new-sticky-button:hover {
+  border-color: rgba(5, 2, 2, 0.801);
+  background-color: hsla(56, 100%, 49%, 0.781);
+  color: black;
+}
+.add-new-sticky-button:active {
+  border-width: 1px;
+  border-color: rgb(0, 0, 0);
+}
+
+.undo-button:disabled {
+  padding: 3px;
+  font-size: 15px;
+  min-height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 4px;
+  border: solid 1px hsl(0, 0%, 80%);
+  outline: 0 !important;
+  transition: all 100ms;
+  color: hsl(0, 0%, 50%);
+}
+.undo-button:enabled {
+  padding: 3px;
+  font-size: 15px;
+  min-height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 4px;
+  border: solid 1px black;
+  outline: 0 !important;
+  transition: all 100ms;
+  color: black;
+}
+.undo-button:enabled:hover {
+  border-color: black;
+  color: black;
+  font-weight: 600;
+  padding-left: 7px;
+  padding-right: 7px;
+  border: solid 2px black;
+}
+
+.redo-button:disabled {
+  padding: 3px;
+  font-size: 15px;
+  min-height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 4px;
+  border: solid 1px hsl(0, 0%, 80%);
+  outline: 0 !important;
+  transition: all 100ms;
+  color: hsl(0, 0%, 50%);
+}
+.redo-button:enabled {
+  font-size: 15px;
+  min-height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 4px;
+  border: solid 1px black;
+  outline: 0 !important;
+  transition: all 100ms;
+  color: black;
+}
+.redo-button:enabled:hover {
+  border-color: black;
+  color: black;
+  font-weight: 600;
+  padding-left: 7px;
+  padding-right: 7px;
+  border: solid 2px black;
+}
+
+.category-search-bar {
+  width: 40%;
+  font-size: 15px;
+}
+
+.remove-all-button {
+  font-size: 15px;
+  min-height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: hsl(0, 0%, 100%);
   border-radius: 4px;
   border: solid 1px hsl(0, 0%, 80%);
   outline: 0 !important;
@@ -190,10 +413,133 @@
   border-color: rgba(128, 128, 128, 0.603);
 }
 .remove-all-button:active {
-  border-width: 3px;
+  border-width: 2px;
   border-color: rgba(0, 102, 255, 0.603);
 }
 
+.filter-bar {
+  width: 20%;
+  font-size: 15px;
+  height: 30px;
+  padding: 5px;
+}
+
+
+/* ----------------ADD NEW POST IT FORM STYLING-------------------------- */
+.add-new-sticky-form-wrapper {
+  position: absolute;
+  bottom: 30%;
+  right: 35%;
+  margin-right: 2%;
+  z-index: 9999 !important;
+  width: 30%;
+  height: 40%;
+}
+
+.add-new-sticky-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: white;
+  border: solid 3px black;
+  border-radius: 14px;
+  height: 100%;
+}
+.add-new-sticky-form label {
+  font-size: 15px;
+  font-weight: 600;
+}
+.add-new-sticky-form input[type="text"] {
+  width: 94.5%;
+  padding: 15px;
+  margin: 5px 0 10px 0;
+  border: none;
+  background: #f1f1f1;
+  font-size: 15px;
+}
+
+.add-new-sticky-form input[type="text"]:focus {
+  background-color: #ddd;
+  outline: none;
+  font-weight: 600;
+}
+
+#new-sticky-description {
+  height: 30%;
+  padding: 10px;
+  border: solid 2px hsl(0, 0%, 50%);
+  font-size: 15px;
+  font: inherit;
+  margin-top: 8px;
+  margin-bottom: 3%;
+}
+
+.category-select-bar {
+  margin-bottom: 4%;
+}
+
+.submit-add-sticky-button {
+  font-size: 15px;
+  margin-left: 30%;
+  margin-bottom: 2%;
+  width: 40%;
+  min-height: 38px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 4px;
+  border: solid 2px hsl(0, 0%, 80%);
+  outline: 0 !important;
+  transition: all 100ms;
+  color: hsl(0, 0%, 50%);
+}
+.submit-add-sticky-button:hover {
+  border-color: rgba(0, 0, 0, 0.822);
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.822);
+}
+.submit-add-sticky-button:active {
+  border-width: 2px;
+  border-color: rgb(68, 185, 0);
+  color: rgb(68, 185, 0);
+}
+
+.cancle-add-sticky-button {
+  width: 40%;
+  margin-left: 30%;
+  font-size: 15px;
+  min-height: 38px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 4px;
+  border: solid 2px hsl(0, 0%, 80%);
+  outline: 0 !important;
+  transition: all 100ms;
+  color: hsl(0, 0%, 50%);
+  margin-bottom: 1%;
+}
+.cancle-add-sticky-button:hover {
+  border-color: rgba(0, 0, 0, 0.822);
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.822);
+}
+.cancle-add-sticky-button:active {
+  border-width: 2px;
+  border-color: rgba(255, 0, 0, 0.603);
+  color: rgba(255, 0, 0, 0.603);
+}
+
+/* ----------------APP BODY MASONRY STYLING-------------------------- */
+.my-masonry-grid {
+  display: flex;
+}
+
+.my-masonry-grid_column {
+  background-clip: padding-box;
+}
+
+/* ----------------APP EMPTY STATE STYLING-------------------------- */
 .empty-state-description-headline {
   font-size: 2rem;
   letter-spacing: 0px;
@@ -226,318 +572,7 @@
   text-align: center;
 }
 
-.add-new-sticky-button {
-  font-size: 20px;
-  min-height: 38px;
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: hsl(59, 100%, 49%);
-  border-color: hsla(0, 71%, 5%, 0.699);
-  border-radius: 4px;
-  border: solid 1px hsla(0, 71%, 5%, 0.699);
-  outline: 0 !important;
-  transition: all 100ms;
-  color: black;
-}
-.add-new-sticky-button:hover {
-  border-color: rgba(5, 2, 2, 0.801);
-  background-color: hsla(56, 100%, 49%, 0.781);
-  color: black;
-}
-.add-new-sticky-button:active {
-  border-width: 1px;
-  border-color: rgb(0, 0, 0);
-}
-
-.add-new-sticky-form-wrapper {
-  position: absolute;
-  bottom: 30%;
-  right: 35%;
-  margin-right: 2%;
-  z-index: 9999 !important;
-  width: 30%;
-  height: 40%;
-}
-
-.add-new-sticky-form {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  background-color: white;
-  border: solid 3px black;
-  border-radius: 14px;
-  height: 100%;
-}
-.add-new-sticky-form label {
-  font-size: 20px;
-  font-weight: 600;
-}
-.add-new-sticky-form input[type="text"] {
-  width: 94.5%;
-  padding: 15px;
-  margin: 5px 0 10px 0;
-  border: none;
-  background: #f1f1f1;
-  font-size: 18px;
-}
-
-.add-new-sticky-form input[type="text"]:focus {
-  background-color: #ddd;
-  outline: none;
-  font-weight: 600;
-}
-
-#new-sticky-description {
-  height: 30%;
-  padding: 10px;
-  border: solid 2px hsl(0, 0%, 50%);
-  font-size: 16px;
-  font: inherit;
-  margin-top: 8px;
-  margin-bottom: 3%;
-}
-
-.submit-add-sticky-button {
-  font-size: 20px;
-  margin-left: 30%;
-  margin-bottom: 2%;
-  width: 40%;
-  min-height: 38px;
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: hsl(0, 0%, 100%);
-  border-color: hsl(0, 0%, 80%);
-  border-radius: 4px;
-  border: solid 3px hsl(0, 0%, 80%);
-  outline: 0 !important;
-  transition: all 100ms;
-  color: hsl(0, 0%, 50%);
-}
-.submit-add-sticky-button:hover {
-  border-color: rgba(0, 0, 0, 0.822);
-  font-weight: 600;
-  color: rgba(0, 0, 0, 0.822);
-}
-.submit-add-sticky-button:active {
-  border-width: 3px;
-  border-color: rgb(68, 185, 0);
-  color: rgb(68, 185, 0);
-}
-
-.cancle-add-sticky-button {
-  width: 40%;
-  margin-left: 30%;
-  font-size: 20px;
-  min-height: 38px;
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: hsl(0, 0%, 100%);
-  border-color: hsl(0, 0%, 80%);
-  border-radius: 4px;
-  border: solid 3px hsl(0, 0%, 80%);
-  outline: 0 !important;
-  transition: all 100ms;
-  color: hsl(0, 0%, 50%);
-  margin-bottom: 1%;
-}
-.cancle-add-sticky-button:hover {
-  border-color: rgba(0, 0, 0, 0.822);
-  font-weight: 600;
-  color: rgba(0, 0, 0, 0.822);
-}
-.cancle-add-sticky-button:active {
-  border-width: 3px;
-  border-color: rgba(255, 0, 0, 0.603);
-  color: rgba(255, 0, 0, 0.603);
-}
-
-.category-select-bar {
-  margin-bottom: 4%;
-}
-
-.undo-button:disabled {
-  font-size: 20px;
-  min-height: 38px;
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 4px;
-  border: solid 1px hsl(0, 0%, 80%);
-  outline: 0 !important;
-  transition: all 100ms;
-  color: hsl(0, 0%, 50%);
-}
-.undo-button:enabled {
-  font-size: 20px;
-  min-height: 38px;
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 4px;
-  border: solid 1px black;
-  outline: 0 !important;
-  transition: all 100ms;
-  color: black;
-}
-.undo-button:enabled:hover {
-  border-color: black;
-  color: black;
-  font-weight: 600;
-  padding-left: 7px;
-  padding-right: 7px;
-  border: solid 3px black;
-}
-
-.redo-button:disabled {
-  font-size: 20px;
-  min-height: 38px;
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 4px;
-  border: solid 1px hsl(0, 0%, 80%);
-  outline: 0 !important;
-  transition: all 100ms;
-  color: hsl(0, 0%, 50%);
-}
-.redo-button:enabled {
-  font-size: 20px;
-  min-height: 38px;
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 4px;
-  border: solid 1px black;
-  outline: 0 !important;
-  transition: all 100ms;
-  color: black;
-}
-.redo-button:enabled:hover {
-  border-color: black;
-  color: black;
-  font-weight: 600;
-  padding-left: 7px;
-  padding-right: 7px;
-  border: solid 3px black;
-}
-
-.edit-button {
-  font-size: 16px;
-  min-height: 30px;
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: hsl(0, 0%, 100%);
-  border-color: hsl(0, 0%, 80%);
-  border-radius: 4px;
-  border: solid 1px hsl(0, 0%, 80%);
-  outline: 0 !important;
-  transition: all 100ms;
-  color: hsl(0, 0%, 50%);
-}
-.edit-button:hover {
-  background-color: hsl(56, 100%, 50%);
-  border-color: hsl(0, 26%, 7%);
-  color: hsl(0, 26%, 7%);
-}
-.edit-button:active {
-  border-width: 3px;
-  font-weight: 600;
-}
-
-.undo-button-and-remove-button-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-left: 18px;
-  margin-right: 18px;
-}
+/* -------------------------------------------------------------------------------- */
 
 
-.cancel-editing-button {
-  font-size: 16px;
-  min-height: 30px;
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: hsl(0, 0%, 100%);
-  border-color: hsl(0, 0%, 80%);
-  border-radius: 4px;
-  border: solid 1px hsl(0, 0%, 80%);
-  outline: 0 !important;
-  transition: all 100ms;
-  color: hsl(0, 0%, 50%);
-}
-.cancel-editing-button:hover {
-  background-color: hsl(56, 100%, 50%);
-  border-color: hsl(0, 26%, 7%);
-  color: hsl(0, 26%, 7%);
-}
-.cancel-editing-button:active {
-  border-width: 3px;
-  font-weight: 600;
-}
 
-.remove-and-finish-and-cancel-editing-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-left: 3px;
-  margin-right: 4px;
-}
-
-.title-editing-label {
-  font-size: 20px;
-  font-weight: 600;
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-.description-editing-label {
-  font-size: 20px;
-  font-weight: 600;
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-
-.post-it-title-input-editing {
-  font-size: 18px;
-  font-weight: 600;
-
-}
-.post-it-description-input-editing {
-  font: inherit;
-  font-size: 18px;
-  padding: 5px;
-}
-
-.editing-form-wrapper {
-  display: flex;
-  flex-direction: column;
-  padding: 5px;
-}
-
-.category-editing-bar {
-  font-size: 16px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.finish-editing-button {
-  font-size: 16px;
-  min-height: 30px;
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color:  hsla(56, 100%, 50%, 0.644);
-  border-radius: 4px;
-  border: solid 1px black;
-  outline: 0 !important;
-  transition: all 100ms;
-  color: black;
-}
-.finish-editing-button:hover {
-  background-color: hsl(56, 100%, 50%);
-  border-color: hsl(0, 26%, 7%);
-  color: hsl(0, 26%, 7%);
-}
-.finish-editing-button:active {
-  border-width: 3px;
-  font-weight: 600;
-}

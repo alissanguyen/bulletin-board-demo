@@ -13,12 +13,6 @@ import UndoButton from "./components/UndoButton";
 import RedoButton from "./components/RedoButton";
 
 function App() {
-  /**
-   * TODO: Edit single post-it
-   * TODO: Implement user authentication
-   * TODO: Add loading state (when adding new post-it)
-   */
-
   // States section-----------------------------------------------------------------
 
   const [
@@ -74,7 +68,6 @@ function App() {
     );
     return newSortedArrayByCategory;
   }
-
 
   function sortedByAlphabetical(array: PostItNoteData[]) {
     const newSortedArrayByAlphabetical = [...array].sort((a, b) =>
@@ -148,15 +141,16 @@ function App() {
         />
         <UndoButton disabled={!undoIsPossible} onUndo={undo} />
         <RedoButton disabled={!redoIsPossible} onRedo={redo} />
+
+        <button className="remove-all-button" onClick={() => handleRemoveAll()}>
+          Remove all
+        </button>
         <CategorySearchBar
           appliedCategoryFilters={appliedCategoryFilters}
           onCategoryChange={(categories) =>
             setAppliedCategoryFilters(categories)
           }
         />
-        <button className="remove-all-button" onClick={() => handleRemoveAll()}>
-          Remove all
-        </button>
         <FilterBar filterBy={(filter: string) => setFilterBy(filter)} />
       </div>
       <div className="empty-state-wrapper">

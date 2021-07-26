@@ -57,7 +57,7 @@ const Organizer: React.FC<Props> = (props) => {
           inputRef.current = element;
         }}
         id="dropdown-menu"
-        className={`dropdown-menu-content ${isOpen ? "show" : undefined}`}
+        className={`sorted-by-bar-dropdown-menu-content ${isOpen ? "show" : undefined}`}
       >
         <a
           href="#date"
