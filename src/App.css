@@ -420,3 +420,124 @@
   padding-right: 7px;
   border: solid 3px black;
 }
+
+.edit-button {
+  font-size: 16px;
+  min-height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: hsl(0, 0%, 100%);
+  border-color: hsl(0, 0%, 80%);
+  border-radius: 4px;
+  border: solid 1px hsl(0, 0%, 80%);
+  outline: 0 !important;
+  transition: all 100ms;
+  color: hsl(0, 0%, 50%);
+}
+.edit-button:hover {
+  background-color: hsl(56, 100%, 50%);
+  border-color: hsl(0, 26%, 7%);
+  color: hsl(0, 26%, 7%);
+}
+.edit-button:active {
+  border-width: 3px;
+  font-weight: 600;
+}
+
+.undo-button-and-remove-button-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 18px;
+  margin-right: 18px;
+}
+
+
+.cancel-editing-button {
+  font-size: 16px;
+  min-height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: hsl(0, 0%, 100%);
+  border-color: hsl(0, 0%, 80%);
+  border-radius: 4px;
+  border: solid 1px hsl(0, 0%, 80%);
+  outline: 0 !important;
+  transition: all 100ms;
+  color: hsl(0, 0%, 50%);
+}
+.cancel-editing-button:hover {
+  background-color: hsl(56, 100%, 50%);
+  border-color: hsl(0, 26%, 7%);
+  color: hsl(0, 26%, 7%);
+}
+.cancel-editing-button:active {
+  border-width: 3px;
+  font-weight: 600;
+}
+
+.remove-and-finish-and-cancel-editing-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 3px;
+  margin-right: 4px;
+}
+
+.title-editing-label {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.description-editing-label {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.post-it-title-input-editing {
+  font-size: 18px;
+  font-weight: 600;
+
+}
+.post-it-description-input-editing {
+  font: inherit;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.editing-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.category-editing-bar {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.finish-editing-button {
+  font-size: 16px;
+  min-height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color:  hsla(56, 100%, 50%, 0.644);
+  border-radius: 4px;
+  border: solid 1px black;
+  outline: 0 !important;
+  transition: all 100ms;
+  color: black;
+}
+.finish-editing-button:hover {
+  background-color: hsl(56, 100%, 50%);
+  border-color: hsl(0, 26%, 7%);
+  color: hsl(0, 26%, 7%);
+}
+.finish-editing-button:active {
+  border-width: 3px;
+  font-weight: 600;
+}

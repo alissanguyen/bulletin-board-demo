@@ -9,7 +9,6 @@ const FilterBar: React.FC<Props> = (props) => {
 
     function handleChange(object: any) {
         props.filterBy(object.value)
-        console.log(object.value)
     }
   const options = [
     { value: "hide", label: "Hide completed tasks" },

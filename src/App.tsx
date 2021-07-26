@@ -1,7 +1,6 @@
 import "./App.css";
 import Organizer from "./components/Organizer";
 import { samplePostIts2 } from "./constants/sampleData";
-import { samplePostIts1 } from "./constants/sampleData";
 import Masonry from "react-masonry-css";
 import PostItNote from "./components/PostItNote";
 import * as React from "react";
@@ -30,6 +29,7 @@ function App() {
     redo,
     redoIsPossible,
   ] = useStateWithHistory<PostItNoteData[]>(samplePostIts2);
+
   const [appliedCategoryFilters, setAppliedCategoryFilters] = React.useState<
     CategoryFilter[]
   >([]);
@@ -74,6 +74,7 @@ function App() {
     );
     return newSortedArrayByCategory;
   }
+
 
   function sortedByAlphabetical(array: PostItNoteData[]) {
     const newSortedArrayByAlphabetical = [...array].sort((a, b) =>
@@ -170,6 +171,23 @@ function App() {
         {postItsFilteredByCategory.map((singlePostItData) => {
           return (
             <PostItNote
+              onEditPostIt={(editedPostIt) => {
+                setPostItMasterList((prev) => {
+                  const indexToUpdate = prev.findIndex(
+                    (el) => el.id === editedPostIt.id
+                  );
+
+                  if (indexToUpdate >= 0) {
+                    const arrayClone = [...prev];
+
+                    arrayClone[indexToUpdate] = editedPostIt;
+
+                    return arrayClone;
+                  } else {
+                    return prev;
+                  }
+                });
+              }}
               removeTargetPostIt={(id) =>
                 setPostItMasterList((prevPostIts) => {
                   const indexToRemove = prevPostIts.findIndex(

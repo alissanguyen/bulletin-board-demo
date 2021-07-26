@@ -9,7 +9,6 @@ interface Props {
 
 const CategorySearchBar: React.FC<Props> = (props) => {
   function handleChange(object: CategoryFilter[]) {
-    console.log(object);
     props.onCategoryChange(object);
   }
   return (

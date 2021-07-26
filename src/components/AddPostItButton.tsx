@@ -23,7 +23,6 @@ const AddPostItButton: React.FC<Props> = (props) => {
       isCompleted: false,
       category: category,
     };
-    console.log(newPostItNoteObject);
     props.handleNewPostIt(newPostItNoteObject);
   }
 
@@ -67,7 +66,6 @@ const AddPostItButton: React.FC<Props> = (props) => {
               placeholder="Select category..."
               options={categories}
               className="category-select-bar"
-              
               onChange={(el) => {
                 if (el !== null) {
                   setCategory(el.value);
