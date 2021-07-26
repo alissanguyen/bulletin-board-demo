@@ -2,7 +2,7 @@
 
 URL https://bulletin-board-demo.alissanguyen.dev/
 
-This is a simple bulletin-board visualization where you can make stickies of tasks to remember. Potentially cloud-enabled for task-management. 
+This is a simple bulletin-board visualization where you can make stickies of tasks to remember. Potentially cloud-enabled for task-management.
 
 # Features
 
@@ -25,11 +25,10 @@ Aufgaben uses a number of open source projects to work properly:
 - [faker] - Fake data generator for the browser.
 - [react-masonry-css] - Masonry design for React components.
 
-
 ### Development
 
 _This project is not open for contribution at the moment._
 
-![Bulletin Board Demo Template Example](https://imgur.com/SZIk8o2)
+![Bulletin Board Demo Template Example](https://i.imgur.com/SZIk8o2.png)
 
-![Bulletin Board Demo Template Example 2](https://imgur.com/F34ftPc)
+![Bulletin Board Demo Template Example 2](https://i.imgur.com/F34ftPc.png)
