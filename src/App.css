@@ -29,11 +29,10 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   padding: 5px;
-  background-color: rgb(185, 169, 22);
+  background-color: #b9a916;
   margin: 10px;
   font-size: 15px;
   padding-top: 15px;
-  opacity: 0.5;
 }
 
 .post-it-title {
