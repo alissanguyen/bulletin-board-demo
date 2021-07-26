@@ -12,10 +12,9 @@ const Organizer: React.FC<Props> = (props) => {
   const buttonRef = React.useRef<HTMLElement | null>(null);
 
   React.useEffect(() => {
-    const listener = window.addEventListener("click", (event) => {
+    window.addEventListener("click", (event) => {
       if (inputRef.current) {
         const domNodeForDropdown = ReactDOM.findDOMNode(inputRef.current);
-        const domNodeForButton = ReactDOM.findDOMNode(buttonRef.current);
 
         /**
          * If the user clicked on the button, don't close the dropdown
@@ -87,7 +86,6 @@ const Organizer: React.FC<Props> = (props) => {
         >
           Alphabetical
         </a>
- 
       </div>
     </div>
   );
